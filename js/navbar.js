@@ -108,8 +108,8 @@ document.addEventListener("DOMContentLoaded", function () {
         { href: "empresa.html", text: "Empresa" },
         { href: "https://beewo.herokuapp.com/formatos/generate_questions/rHpHfKE5ZTMCNVymBKCDHe2s/0/0", text: "PQRS", target: "_blank" }, // Solo PQRS abrirá en una nueva pestaña
         { href: "EquipoDeTrabajo.html", text: "Equipo de trabajo" },
-        { href: "index.html", text: "Contactanos" },
-        { href: "ubicanos.html", text: "Ubicanos" },
+        { href: "index.html", text: "Contáctanos" },
+        { href: "ubicanos.html", text: "Ubícanos" },
         { href: "politica-privacidad.html", text: "Política de SST y Política de Seguridad Vial" }
     ];
 
@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const li = document.createElement('li');
         const a = document.createElement('a');
 
-        if (link.text === "Contactanos") {
+        if (link.text === "Contáctanos") {
             if (isHomePage) {
                 a.href = "#contact";
             } else {

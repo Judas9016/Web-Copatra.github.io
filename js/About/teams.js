@@ -91,4 +91,4 @@ teamMembers.forEach((member, index) => {
 
 // Configurar el encabezado y el pie de página
 teamDescription.textContent = "Nuestro equipo está compuesto por profesionales altamente capacitados para cumplir con cada objetivo.";
-teamFooter.textContent = "¡Estamos comprometidos con ofrecer lo mejor a nuestros clientes!";
+teamFooter.textContent = "¡Estamos comprometidos en ofrecer lo mejor a nuestros clientes!";
