@@ -11732,6 +11732,7 @@ header {
   position: relative;  /* Necesario para crear un efecto de capa */
   box-shadow: inset 0 0 30px rgb(0, 0, 0);  /* Sombra interna para oscurecer la imagen */
 }
+
 /* Overlay oscuro */
 .footer:before {
   content: '';  /* Crear el overlay */
@@ -11756,12 +11757,14 @@ header {
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 20px;
+  flex-wrap: wrap;  /* Para permitir que los elementos se acomoden en pantallas pequeñas */
 }
 
 /* Estilo para la columna izquierda */
 .footer-left {
   width: 30%;
   text-align: left;
+  padding: 10px;
 }
 
 /* Estilo para el logo con box-shadow */
@@ -11775,6 +11778,7 @@ header {
 .footer-right {
   width: 30%;
   text-align: left;
+  padding: 10px;
 }
 
 .footer-right ul {
@@ -11861,6 +11865,66 @@ header {
 .footer-bottom {
   margin-top: 30px;  /* Reduce el margen para que el texto de copyright no se separe demasiado */
   font-size: 12px;
+}
+
+/* --- Responsive Design --- */
+
+/* Para pantallas medianas (de 768px a 1024px) */
+@media (max-width: 1024px) {
+  .footer-container {
+    flex-direction: column;  /* Cambia la dirección de las columnas */
+    align-items: center;
+  }
+
+  .footer-left, .footer-right {
+    width: 100%;  /* Las columnas ocupan el 100% del ancho en pantallas más pequeñas */
+    text-align: center;  /* Centra el texto */
+    margin-bottom: 20px;  /* Espacio entre las columnas */
+  }
+
+  .footer-logo img {
+    width: 200px;  /* Reduce el tamaño del logo en pantallas pequeñas */
+  }
+
+  .footer-social {
+    text-align: center;  /* Centra los iconos de redes sociales */
+  }
+}
+
+/* Para pantallas pequeñas (menores a 768px) */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;  /* Cambia la dirección de las columnas a vertical */
+    align-items: center;
+  }
+
+  .footer-left, .footer-right {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+
+  .footer-logo img {
+    width: 150px;  /* Reduce aún más el tamaño del logo */
+  }
+
+  .footer-images a {
+    margin: 2px;  /* Reduce el espacio entre las imágenes */
+  }
+
+  .banner-img {
+    width: 100%;  /* Hace que la imagen del banner ocupe el 100% del ancho */
+    max-width: 300px;  /* Limita el tamaño máximo */
+  }
+
+  .footer-bottom {
+    font-size: 10px;  /* Reduce el tamaño de la fuente del copyright */
+  }
+
+  .social-icon {
+    font-size: 25px; /* Reduce el tamaño de los íconos en pantallas pequeñas */
+    margin: 5px;  /* Reduce el margen entre los íconos */
+  }
 }
 
 

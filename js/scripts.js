@@ -219,16 +219,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-// Mostrar la página solo después de que todo se haya cargado
-window.addEventListener("load", () => {
-  const loader = document.getElementById("loader");
-  const content = document.getElementById("content");
-
-  // Oculta la pantalla de carga
-  loader.style.opacity = "0"; // Transición suave
-  setTimeout(() => {
-    loader.style.display = "none"; // Oculta completamente
-    content.style.display = "block"; // Muestra el contenido
-  }, 300); // Espera el tiempo de transición
-});
 

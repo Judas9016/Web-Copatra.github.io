@@ -166,14 +166,6 @@ ul li {
     text-decoration: underline;
 }
 
-
-/* Detalles de los valores */
-.reveal {
-    display: none;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
 /* Animaciones para las secciones */
 @keyframes slideUp {
     0% {
@@ -215,6 +207,7 @@ ul li {
         transform: scale(1);
     }
 }
+
 /* Contenedor del video */
 .video-container {
     position: relative;
@@ -249,10 +242,9 @@ ul li {
 /* Sección de valores */
 #valores {
     padding: 60px 30px;
-    /* Elimina el fondo blanco */
-    background-color: transparent; /* Asegúrate de que el fondo sea transparente */
+    background-color: transparent;
     border-radius: 15px;
-    box-shadow: none; /* Elimina cualquier sombra */
+    box-shadow: none;
 }
 
 /* Título de la sección */
@@ -282,10 +274,10 @@ ul li {
 
 /* Estilo de cada ítem de valor */
 .valor-item {
-    background-color: transparent; /* Fondo transparente */
-    border: 2px solid transparent; /* Borde transparente por defecto */
+    background-color: transparent;
+    border: 2px solid transparent;
     padding: 40px;
-    box-shadow: none; /* Elimina cualquier sombra */
+    box-shadow: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
     text-align: center;
     color: #444;
@@ -293,10 +285,10 @@ ul li {
 
 /* Efecto hover para los ítems */
 .valor-item:hover {
-    transform: translateY(-10px); /* Desplazamiento hacia arriba */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Sombra al pasar el cursor */
-    border-color: #4CAF50; /* Borde verde */
-    background-color: rgba(76, 175, 80, 0.1); /* Fondo verde claro con opacidad */
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    border-color: #4CAF50;
+    background-color: rgba(76, 175, 80, 0.1);
 }
 
 /* Estilo de los íconos */
@@ -304,104 +296,38 @@ ul li {
     font-size: 3rem;
     color: #4caf50;
     margin-bottom: 20px;
-    transition: color 0.3s ease; /* Transición suave para el color del ícono */
+    transition: color 0.3s ease;
 }
 
 /* Efecto hover sobre el ícono */
 .valor-item:hover .valor-icon {
-    color: #388e3c; /* Verde más oscuro para el ícono al hacer hover */
+    color: #388e3c;
 }
 
-/* Estilo de los títulos y párrafos */
-.valor-item h3 {
-    font-size: 1.7rem;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-.valor-item p {
-    font-size: 1.1rem;
-    color: #777;
-    line-height: 1.6;
-}
-
-/* Diseño responsivo */
+/* Media Queries para dispositivos más pequeños */
 @media (max-width: 768px) {
     .section-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .section-text {
         font-size: 1rem;
     }
 
-    .valores-grid {
-        grid-template-columns: 1fr;
+    .image {
+        width: 90%;
+        max-width: none;
+        height: auto;
     }
 
-    .valor-item {
-        padding: 30px;
-    }
-
-    .valor-icon {
-        font-size: 2.5rem;
-    }
-}
-
-
-/* Estilo de los títulos y párrafos */
-.valor-item h3 {
-    font-size: 1.7rem;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-.valor-item p {
-    font-size: 1.1rem;
-    color: #777;
-    line-height: 1.6;
-}
-
-/* Diseño responsivo */
-@media (max-width: 768px) {
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .section-text {
+    .btn {
         font-size: 1rem;
-    }
-
-    .valores-grid {
-        grid-template-columns: 1fr;
+        padding: 10px 20px;
     }
 
     .valor-item {
-        padding: 30px;
-    }
-
-    .valor-icon {
-        font-size: 2.5rem;
-    }
-}
-
-
-/* Diseño responsivo */
-@media (max-width: 768px) {
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .section-text {
+        padding: 25px;
         font-size: 1rem;
-    }
-
-    .valores-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .valor-item {
-        padding: 30px;
     }
 
     .valor-icon {
