@@ -1,0 +1,155 @@
+/* Aseguramos que el fondo y los estilos generales no cambien */
+body {
+    background-color: #f9f9f9;
+    padding-top: 100px;  /* Añadimos un padding-top para desplazar todo el contenido hacia abajo */
+    font-family: 'Arial', sans-serif;  /* Establecemos una tipografía limpia y moderna */
+}
+
+.carousel-item img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border: 5px solid #4CAF50; /* Borde verde para las imágenes */
+    transition: transform 0.3s ease-in-out;  /* Efecto de hover en la imagen */
+}
+
+.carousel-item img:hover {
+    transform: scale(1.05); /* Efecto de ampliación de imagen al pasar el mouse */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #4CAF50; /* Controles en verde */
+}
+
+/* Mejorando la apariencia de los miembros del equipo */
+.team-member {
+    background-color: #ffffff;
+    border: 1px solid #4CAF50;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease-in-out; /* Animación al pasar el mouse */
+}
+
+.team-member:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra suave al hacer hover */
+}
+
+.team-member ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.team-member ul li {
+    font-size: 14px;
+    color: #4CAF50;
+    margin-bottom: 5px;
+}
+
+.team-member ul li::before {
+    content: "✔";
+    color: #4CAF50;
+    margin-right: 5px;
+}
+
+.team-member p {
+    font-size: 16px;
+    color: #4CAF50;
+    margin-top: 10px;
+}
+
+/* Contenedor de equipo con un margen y padding adecuado */
+.container {
+    padding-bottom: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+h2 {
+    color: #4CAF50;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el carrusel */
+.carousel-item img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto; /* Centrar la imagen */
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item img:hover {
+    transform: scale(1.05);
+}
+
+.carousel-item h5 {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #4CAF50;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.carousel-item h5:hover {
+    color: #4CAF50;
+}
+
+.carousel-item p {
+    font-size: 14px;
+    color: #000000;
+    transition: color 0.3s ease;
+}
+
+.carousel-item p:hover {
+    color: #333;
+}
+
+.carousel-item ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.carousel-item ul li {
+    font-size: 14px;
+    color: #4CAF50;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-item ul li::before {
+    content: "✔";
+    margin-right: 5px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #4CAF50; /* Verde para los controles */
+}
+
+/* Responsividad para dispositivos móviles */
+@media (max-width: 768px) {
+    .carousel-item img {
+        width: 150px;
+        height: 150px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .carousel-item h5 {
+        font-size: 16px;
+    }
+
+    .carousel-item p {
+        font-size: 12px;
+    }
+}

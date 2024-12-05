@@ -1,0 +1,410 @@
+/* RESET de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth; /* Suaviza el desplazamiento */
+}
+
+/* Contenido principal */
+.content {
+    margin-top: 120px; /* Ajusta este valor según la altura de la navbar */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/* Ajustar el margen superior de las secciones para evitar que se solapen con la navbar */
+#historia, #mision, #vision{
+    margin-top: 30px; /* Ajusta este valor según la altura de la navbar */
+}
+
+/* Asegurarse que las imágenes dentro de las secciones no se solapen */
+.section img {
+    margin-top: 20px; /* Añadir un margen superior a las imágenes para mayor claridad */
+}
+
+/* Opcional: Si deseas agregar un poco más de espacio entre las secciones, puedes hacerlo aquí */
+.section {
+    margin-bottom: 30px; /* Espacio entre las secciones, puedes ajustarlo a tu gusto */
+}
+
+/* Títulos de las secciones */
+.section-title {
+    font-size: 2rem;
+    color: #4CAF50;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Estilo para las imágenes */
+.image {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Estilo de los párrafos y listas */
+.section-text {
+    font-size: 1.1rem;
+    color: #555;
+    text-align: justify;
+    margin-top: 15px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 8px 0;
+}
+
+/* Estilo de los botones */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    margin-top: 15px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: 2px solid #4CAF50;
+    border-radius: 40px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    position: relative; /* Necesario para el efecto de sombra */
+}
+
+/* Efecto hover para el botón */
+.btn:hover {
+    background-color: #45a049;
+    border-color: #45a049;
+    transform: translateY(-4px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para los detalles */
+.reveal {
+    display: none;
+    margin-top: 15px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* Animación para revelar los detalles */
+.reveal.show {
+    display: block;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Estilo adicional para el texto dentro de los detalles */
+.reveal p, .reveal ul {
+    margin: 15px 0;
+}
+
+.reveal h3, .reveal h4 {
+    color: #4CAF50;
+}
+
+/* Estilo para el contenido adicional */
+.additional-content {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #ddd;
+}
+
+.additional-content ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.additional-content ul li {
+    font-size: 1rem;
+}
+
+.growth-chart {
+    max-width: 100%;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+/* Efecto hover para los enlaces */
+.additional-content a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.additional-content a:hover {
+    color: #45a049;
+    text-decoration: underline;
+}
+
+
+/* Detalles de los valores */
+.reveal {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Animaciones para las secciones */
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate__fadeInUp {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate__zoomIn {
+    animation: zoomIn 1s ease-in-out;
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/* Contenedor del video */
+.video-container {
+    position: relative;
+    width: 100%; /* El contenedor ocupa el 100% del ancho disponible */
+    height: 60vh; /* Ajusta la altura para que el video ocupe más espacio verticalmente */
+    overflow: hidden; /* Evita que el video se desborde fuera del contenedor */
+    display: flex;
+    justify-content: center; /* Centra el video horizontalmente */
+    align-items: center; /* Centra el video verticalmente */
+}
+
+/* Estilo del video */
+.background-video {
+    position: absolute;
+    top: 50%; /* Centra el video verticalmente */
+    left: 50%; /* Centra el video horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta el video para estar completamente centrado */
+    width: 120%; /* Amplía el video para hacerlo más ancho que el contenedor */
+    height: 100%; /* Mantiene la altura del video dentro del contenedor */
+    object-fit: cover; /* Asegura que el video cubra el área del contenedor sin dejar espacio vacío */
+    z-index: -1; /* Coloca el video en el fondo */
+}
+
+/* Estilo para el contenido sobre el video */
+.section {
+    position: relative;
+    z-index: 1; /* Asegura que el contenido esté encima del video */
+    padding: 20px;
+    color: white; /* Cambia el color del texto para que sea visible sobre el video */
+}
+
+/* Sección de valores */
+#valores {
+    padding: 60px 30px;
+    /* Elimina el fondo blanco */
+    background-color: transparent; /* Asegúrate de que el fondo sea transparente */
+    border-radius: 15px;
+    box-shadow: none; /* Elimina cualquier sombra */
+}
+
+/* Título de la sección */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #4caf50;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+/* Texto introductorio */
+.section-text {
+    font-size: 1.2rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+/* Contenedor para los valores */
+.valores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* Estilo de cada ítem de valor */
+.valor-item {
+    background-color: transparent; /* Fondo transparente */
+    border: 2px solid transparent; /* Borde transparente por defecto */
+    padding: 40px;
+    box-shadow: none; /* Elimina cualquier sombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+    text-align: center;
+    color: #444;
+}
+
+/* Efecto hover para los ítems */
+.valor-item:hover {
+    transform: translateY(-10px); /* Desplazamiento hacia arriba */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Sombra al pasar el cursor */
+    border-color: #4CAF50; /* Borde verde */
+    background-color: rgba(76, 175, 80, 0.1); /* Fondo verde claro con opacidad */
+}
+
+/* Estilo de los íconos */
+.valor-icon {
+    font-size: 3rem;
+    color: #4caf50;
+    margin-bottom: 20px;
+    transition: color 0.3s ease; /* Transición suave para el color del ícono */
+}
+
+/* Efecto hover sobre el ícono */
+.valor-item:hover .valor-icon {
+    color: #388e3c; /* Verde más oscuro para el ícono al hacer hover */
+}
+
+/* Estilo de los títulos y párrafos */
+.valor-item h3 {
+    font-size: 1.7rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.valor-item p {
+    font-size: 1.1rem;
+    color: #777;
+    line-height: 1.6;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-text {
+        font-size: 1rem;
+    }
+
+    .valores-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .valor-item {
+        padding: 30px;
+    }
+
+    .valor-icon {
+        font-size: 2.5rem;
+    }
+}
+
+
+/* Estilo de los títulos y párrafos */
+.valor-item h3 {
+    font-size: 1.7rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.valor-item p {
+    font-size: 1.1rem;
+    color: #777;
+    line-height: 1.6;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-text {
+        font-size: 1rem;
+    }
+
+    .valores-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .valor-item {
+        padding: 30px;
+    }
+
+    .valor-icon {
+        font-size: 2.5rem;
+    }
+}
+
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-text {
+        font-size: 1rem;
+    }
+
+    .valores-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .valor-item {
+        padding: 30px;
+    }
+
+    .valor-icon {
+        font-size: 2.5rem;
+    }
+}

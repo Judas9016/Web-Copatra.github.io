@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Copatra</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/logo-empresa.ico" />
+       <!-- Iconos de Font Awesome (versión gratuita)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- fuentes de Google-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Css (incluye Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/ia.css">
+
+    </head>
+    <body id="page-top">
+
+        <!-- Pantalla de carga -->
+  <div id="loader">
+    <img src="assets/img/logos/logo de carga.webp" alt="Logo Copatra" class="logo">
+  </div>
+
+        <!-- Navegación-->
+ <!-- Barra de navegación -->
+ <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand" href="#page-top"><img src="assets/img/logos/logo HD.JPG" alt="Logo" /></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu <i class="fas fa-bars ms-1"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0" id="navbar-items">
+                <!-- Los elementos de navegación se inyectarán aquí mediante JavaScript -->
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Cabecera -->
+<header class="masthead">
+    <div class="container">
+        <div class="masthead-subheading">¡Bienvenido a Copatra Ltda!</div>
+        <div class="masthead-heading text-uppercase">¿Quieres ser parte del equipo Copatra?</div>
+        <!-- Agregar target="_blank" para abrir el enlace en una nueva pestaña -->
+        <a class="btn btn-primary btn-xl text-uppercase" href="https://bee-wo.com/formatos/generate_questions/2YDGbxZjn2kTdTr8y9BeL2Ag/0/0" target="_blank">Postúlate aquí</a>
+    </div>
+</header>
+
+
+
+        <!-- Cuadrícula de cartera-->
+<section class="page-section bg-light" id="portfolio">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Rutas</h2>
+            <h3 class="section-subheading text-muted">Copatra te lleva a tus destinos favoritos, conectando las principales zonas de Medellín con confort y seguridad. ¡Haz tu viaje más fácil con nosotros!</h3>
+        </div>
+        <div class="row" id="portfolioGrid"></div>
+    </div>
+</section>
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">Últimas Noticias</h2>
+    <div class="row news-container"></div>
+  </div>
+
+<div class="container my-5">
+    <div class="news-container">
+      <!-- Noticias dinámicas serán añadidas aquí -->
+    </div>
+    <div class="text-center mt-4 position-relative">
+      <!-- Contenedor para el bus -->
+      <div id="busAnimation" class="bus-animation">🚌</div>
+      <button class="btn btn-secondary" id="loadMoreButton">Ver más <i class="fas fa-arrow-down"></i></button>
+    </div>
+  </div>
+
+  <div class="modal fade" id="newsModal" tabindex="-1" aria-labelledby="newsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="newsModalLabel">Noticia</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="modal-content">
+          <!-- Contenido de la noticia -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+       <!-- Sección de Contacto -->
+<section class="page-section" id="contact">
+    <div class="container">
+        <div class="text-center">
+            <h2 id="contactHeading" class="section-heading text-uppercase">Contáctanos</h2>
+            <h3 id="contactSubheading" class="section-subheading text-muted"></h3>
+        </div>
+        <form id="contactForm" action="https://formspree.io/f/xdkodvok" method="POST" novalidate>
+            <div class="row align-items-stretch mb-5">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <!-- Entrada de nombre-->
+                        <input class="form-control" id="name" name="name" type="text" placeholder="Su nombre *" required />
+                        <div class="invalid-feedback">Se requiere un nombre.</div>
+                    </div>
+                    <div class="form-group">
+                        <!-- Entrada de dirección de correo electrónico-->
+                        <input class="form-control" id="email" name="email" type="email" placeholder="Tu correo electrónico *" required />
+                        <div class="invalid-feedback">El correo electrónico no es válido.</div>
+                    </div>
+                    <div class="form-group mb-md-0">
+                        <!-- Entrada del número de teléfono-->
+                        <input class="form-control" id="phone" name="phone" type="tel" placeholder="Tu teléfono *" required />
+                        <div class="invalid-feedback">Se requiere un número de teléfono.</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group form-group-textarea mb-md-0">
+                        <!-- Entrada de mensaje-->
+                        <textarea class="form-control" id="message" name="message" placeholder="Tu mensaje *" required></textarea>
+                        <div class="invalid-feedback">Se requiere un mensaje.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mensajes de éxito/error -->
+            <div class="d-none" id="submitSuccessMessage">
+                <div class="text-center text-white mb-3">
+                    <div class="fw-bolder">¡El envío del formulario fue exitoso!</div>
+                </div>
+            </div>
+            <div class="d-none" id="submitErrorMessage">
+                <div class="text-center text-danger mb-3">¡Error al enviar el mensaje!</div>
+            </div>
+            <!-- Botón Enviar -->
+            <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase" id="submitButton" type="submit">Enviar mensaje</button></div>
+        </form>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer" style="background-image: url('assets/img/Sujerencias.JPG'); background-size: cover;">
+    <div class="footer-container">
+        <!-- Información a la izquierda -->
+        <div class="footer-left">
+            <p>Carrera 52 #50-25 Oficina. 536<br>Medellín, Colombia</p>
+            <p>604 475 4590<br>(57) 314 680 18 54</p>
+            <p>@copatra.net</p>
+            <p>Lun-Vie: 7:00 am – 5:00 pm</p>
+        </div>
+
+        <!-- Logo centrado, redirige al inicio -->
+        <div class="footer-logo">
+            <a href="#page-top"><img src="assets/img/logos/logo HD.JPG" alt="Logo Copatra" /></a>
+        </div>
+
+        <!-- Enlaces a la derecha -->
+        <div class="footer-right">
+            <ul class="footer-links">
+                <!-- Enlaces se generarán dinámicamente con JavaScript -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Redes sociales -->
+    <div class="footer-social">
+        <!-- Los enlaces se añadirán dinámicamente con JavaScript -->
+    </div>
+
+    <!-- Imágenes pequeñas (con enlaces) -->
+    <div class="footer-images">
+        <!-- Las imágenes se añadirán dinámicamente con JavaScript -->
+    </div>
+
+    <a href="https://mintransporte.gov.co/" target="_blank" rel="noopener noreferrer">
+        <img class="banner-img" src="assets/img/logos/supertransporte.png" alt="Imagen 7">
+    </a>
+    
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+        <p>COPATRA © 2025 - Todos los derechos reservados. | Diseño por SENA</p>
+    </div>
+</footer>
+
+<!-- Botón para abrir el chatbot con el texto "Preguntas frecuentes" -->
+<button id="open-chat-btn" class="open-chat-btn">Preguntas frecuentes</button>
+
+<!-- Contenedor del chatbot -->
+<div class="chat-container" id="chat-container">
+    <!-- Botón para cerrar el chatbot -->
+    <button id="close-chat-btn" class="close-chat-btn">&times;</button>
+
+    <div id="chatbox">
+        <!-- El chat comienza vacío -->
+    </div>
+    <div class="question-area">
+        <!-- Botones para preguntas -->
+    </div>
+</div>
+
+
+        <!-- Modales de cartera-->
+        <!-- Ventana emergente modal del elemento de cartera 1-->
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/X Cerrar.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Detalles del proyecto-->
+                                    <h2 class="text-uppercase">Pinal</h2>
+                                    <p class="item-intro text-muted">"De 7 a 9: intercambio entre el bus de Alpujarra y el de Minorista."</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/Ruta090.jpeg" alt="..." />
+                                    <p></p>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>Inicio:</strong>
+                                            Pinal
+                                        </li>
+                                        <li>
+                                            <strong>Fin:</strong>
+                                           Alpujarra-Minorista
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Cerrar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Ventana emergente modal del artículo 2 de la cartera-->
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/X Cerrar.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Detalles del proyecto-->
+                                    <h2 class="text-uppercase">Llanadas</h2>
+                                    <p class="item-intro text-muted">"De 7 a 9: intercambio entre el bus de Camino Real y el de Minorista."</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/Ruta091.jpeg" alt="..." />
+                                    <p></p>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>Inicio:</strong>
+                                            Llanadas
+                                        </li>
+                                        <li>
+                                            <strong>Fin:</strong>
+                                            Camino Real-Minorista
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Cerrar 
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Ventana emergente modal del artículo 3 de la cartera-->
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/X Cerrar.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Detalles del proyecto-->
+                                    <h2 class="text-uppercase">Villa Liliam (CAICEDO)</h2>
+                                    <p class="item-intro text-muted"></p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/Ruta093.jpeg" alt="..." />
+                                    <p></p>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>Inicio:</strong>
+                                            Villa Liliam
+                                        </li>
+                                        <li>
+                                            <strong>Fin:</strong>
+                                            Cuadradero Palacé
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Cerrar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Ventana emergente modal del artículo 4 de la cartera-->
+        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/X Cerrar.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Detalles del proyecto-->
+                                    <h2 class="text-uppercase">Santa Lucia.</h2>
+                                    <p class="item-intro text-muted">"De 7 a 9: intercambio entre el bus de ..."</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/Ruta094.jpeg" alt="..." />
+                                    <p></p>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>Inicio:</strong>
+                                            Santa Lucia.
+                                        </li>
+                                        <li>
+                                            <strong>Fin:</strong>
+                                            Minorista
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Cerrar 
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Ventana emergente modal del elemento de cartera 5-->
+        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/X Cerrar.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Detalles del proyecto-->
+                                    <h2 class="text-uppercase">Villatina</h2>
+                                    <p class="item-intro text-muted">"De 7 a 9: intercambio entre el bus de ..."</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/Ruta095.jpeg" alt="..." />
+                                    <p></p>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>Inicio:</strong>
+                                            Villanita
+                                        </li>
+                                        <li>
+                                            <strong>Fin:</strong>
+                                            Minorista
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Cerrar 
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Ventana emergente modal del elemento de cartera 6-->
+        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/X Cerrar.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Detalles del proyecto-->
+                                    <h2 class="text-uppercase">Palmas</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/Ruta112.JPG" alt="..." />
+                                    <p></p>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>Inicio:</strong>
+                                            Ventana
+                                        </li>
+                                        <li>
+                                            <strong>Fin:</strong>
+                                            Fotografía
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Cerrar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Núcleo de arranque JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Tema principal JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB formularios JS                               * *-->
+        <!-- * * Activa tu formulario en https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script src="js/navbar.js"></script>
+        <script src="js/logowpp.js"></script>
+        <script src="js/ia.js"></script>
+        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        
+    </body>
+</html>

@@ -1,0 +1,151 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Fondo gris claro */
+    text-align: center;
+}
+
+/* Títulos */
+h2 {
+    margin: 1em 0;
+    color: #4CAF50; /* Verde para los títulos */
+}
+
+/* Contenedor del carrusel */
+.carrusel-container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    max-width: 960px;
+}
+
+/* Carrusel */
+.carrusel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 1em;
+    width: max-content;
+}
+
+/* Contenedor de testimonios */
+.testimonios {
+    margin: 2em 0;
+    text-align: center;
+}
+
+/* Cada testimonio */
+.testimonio {
+    background-color: #fff; /* Fondo blanco para los testimonios */
+    border-radius: 10px;
+    padding: 0.8em;
+    min-width: 220px; /* Hacer los testimonios más pequeños */
+    max-width: 270px; /* Limitar el tamaño */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+    position: relative;
+    height: auto; /* Deja que el testimonio se ajuste dinámicamente */
+    display: flex;
+    flex-direction: column; /* Asegura que todo el contenido esté en una columna */
+    justify-content: space-between; /* Distribuye el contenido de manera uniforme */
+    word-wrap: break-word; /* Evita el corte de palabras largas */
+    overflow-wrap: break-word; /* Para que el texto largo se ajuste correctamente */
+    margin-bottom: 1.5em; /* Espacio entre testimonios */
+    transition: transform 0.3s ease;
+}
+
+.testimonio:hover {
+    transform: scale(1.05); /* Efecto de hover para que se agrande */
+}
+
+/* Estilo para el ícono de Google */
+.icono-google {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+/* Información del testimonio */
+.info {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+.imagen {
+    width: 40px; /* Reducido */
+    height: 40px; /* Reducido */
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.texto .nombre {
+    font-weight: bold;
+    font-size: 1em; /* Reducido */
+    color: #4CAF50; /* Verde para los nombres */
+}
+
+.texto .fecha {
+    font-size: 0.8em; /* Reducido */
+    color: gray;
+}
+
+/* Estrellas */
+.estrellas {
+    color: gold;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+/* Comentarios */
+.comentario {
+    font-size: 0.9em; /* Reducido */
+    color: #333;
+    margin-top: 0.5em;
+    flex-grow: 1;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limita el número de líneas visibles */
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Eliminar las flechas */
+.flecha {
+    display: none;
+}
+
+/* Botones de acción */
+.testimonio a {
+    margin: 5px;
+    color: #fff;
+    background-color: #4CAF50; /* Fondo verde */
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.testimonio a:hover {
+    background-color: #FFEB3B; /* Amarillo al pasar el mouse */
+}
+
+/* Indicadores del carrusel */
+.carousel-indicators li {
+    background-color: #4CAF50; /* Color verde para los indicadores del carrusel */
+}
+
+.carousel-indicators .active {
+    background-color: #FFEB3B; /* Amarillo para el indicador activo */
+}
+
+/* Eliminar las flechas del carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #4CAF50; /* Controles en verde */
+}
