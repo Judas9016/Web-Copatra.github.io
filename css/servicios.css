@@ -5,8 +5,8 @@ body {
     padding: 0;
   }
   
-  h2, h3 {
-    font-weight: bold;
+  h2, .h3 {
+    font-weight: bold;;
   }
   
   .servicios {
@@ -20,9 +20,10 @@ body {
   }
   
   .descripcion-general {
-    font-size: 1.2em;
-    color: #555;
-    margin-bottom: 30px;
+    font-weight: 400;
+    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    color: #000000;
+    font-size: 20px; /* Aumenta el tamaño del texto */
   }
   
   /* Estilos para la sección de servicios */
@@ -46,7 +47,7 @@ body {
   
   .servicio:hover {
     transform: translateY(-5px);
-    border-color: #00f50c;
+    border-color: #4CAF50;
     border-style: solid;
     border-width: 2px;
   }
@@ -65,7 +66,7 @@ body {
 
   
   h3 {
-    color: #333;
+    color: #4CAF50;
     font-size: 1.5em;
     margin-bottom: 10px;
   }

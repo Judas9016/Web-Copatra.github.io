@@ -3,7 +3,7 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f9;
+  background-color:rgb(248, 249, 250);
   width: 100%; /* Asegura que el body ocupe todo el ancho disponible */
   box-sizing: border-box; /* Hace que los márgenes y el padding no afecten el ancho total */
 }
@@ -198,7 +198,7 @@ body, html {
   position: fixed;
   bottom: 62px; /* Ajustado para mover más abajo */
   right: 80px; /* Mover a la derecha */
-  background-color: #ffeb3b; /* Amarillo */
+  background-color: #25D366; /* Verde de la ia */
   color: #000000; /* Verde */
   border: none;
   border-radius: 50%;
@@ -215,6 +215,6 @@ body, html {
 }
 
 .open-chat-btn:hover {
-  background-color: #cddc39; /* Verde más suave */
+  background-color: #cddc39; /* Amarillo más suave */
   transform: scale(1.1); /* Efecto de ampliación */
 }
