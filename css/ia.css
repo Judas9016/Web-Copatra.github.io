@@ -1,220 +1,167 @@
-/* Evitar el desplazamiento horizontal de la página */
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color:rgb(248, 249, 250);
-  width: 100%; /* Asegura que el body ocupe todo el ancho disponible */
-  box-sizing: border-box; /* Hace que los márgenes y el padding no afecten el ancho total */
+/* Estilo del botón de abrir chat */
+#open-chat-btn {
+  font-size: 9px; /* Botón más pequeño */
+  background-color: #008542;
+  color: #000000;
+  text-shadow: 0 2px 0 rgb(0 0 0 / 25%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 60px; /* Posición más arriba */
+  right: 45px;
+  border: 0;
+  z-index: 1;
+  user-select: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.4rem 0.8rem; /* Más pequeño */
+  font-weight: 900;
+  transition: all 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
 }
 
-/* Asegurarnos de que todos los elementos también respeten este comportamiento */
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-/* Restablecer cualquier desbordamiento no deseado en otros elementos */
-html {
+#open-chat-btn:before {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  display: block;
   width: 100%;
-  overflow-x: hidden; /* Evita desplazamiento horizontal global */
+  height: 100%;
+  content: "";
+  transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+  z-index: -1;
+  background-color: #25D366 !important;
+  box-shadow: 0 -4px rgb(238, 253, 31, 0.99) inset,
+    0 4px rgba(238, 253, 31, 0.99) inset, -4px 0 rgb(238, 253, 31, 0.99) inset,
+    4px 0 rgb(238, 253, 31, 0.99) inset;
 }
 
-body, html {
-  height: 100%; /* Asegura que el cuerpo y el HTML ocupen toda la altura */
+#open-chat-btn:hover:before {
+  box-shadow: 0 -4px rgb(0 0 0 / 50%) inset, 0 4px rgb(255 255 255 / 20%) inset,
+    -4px 0 rgb(255 255 255 / 20%) inset, 4px 0 rgb(0 0 0 / 50%) inset;
 }
 
-
-
-.open-chat-btn:hover {
-  background-color: #cddc39; /* Verde más suave */
-  transform: scale(1.1); /* Efecto de ampliación */
+#open-chat-btn:active {
+  transform: translateY(4px);
 }
 
-/* Contenedor del chatbot */
-.chat-container {
+#open-chat-btn:active:after {
+  box-shadow: 0 0px 0 0 rgb(0 0 0 / 15%);
+}
+
+/* Estilos del chat */
+#chat-container {
   display: none;
   position: fixed;
-  bottom: 70px;
-  right: 20px; /* Mover a la derecha */
-  width: 350px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  flex-direction: column;
-  overflow: hidden;
-  opacity: 0;
-  animation: slideIn 0.5s forwards, fadeIn 0.5s forwards, frameGlow 1s infinite alternate; /* Animación continua del marco */
+  bottom: 100px; /* Posición más arriba */
+  right: 0;
+  width: 300px;
+  height: 400px;
+  background-color: white;
+  border-left: 2px solid #4CAF50;
+  border-top: 2px solid #4CAF50;
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: bottom 0.7s cubic-bezier(0, 0.8, 0.26, 0.99); /* Añadir animación para mover el chat */
 }
 
-/* Animación de deslizamiento desde abajo */
-@keyframes slideIn {
-  from {
-      transform: translateY(100%);
-  }
-  to {
-      transform: translateY(0);
-  }
+#chat-container.opened {
+  bottom: 250px; /* Posición más arriba cuando el chat está abierto */
 }
 
-/* Animación de desvanecimiento */
-@keyframes fadeIn {
-  from {
-      opacity: 0;
-  }
-  to {
-      opacity: 1;
-  }
-}
-
-/* Animación continua del marco (resplandor) */
-@keyframes frameGlow {
-  0% {
-      box-shadow: 0 0 0px #ffeb3b, 0 0 0px rgba(0, 0, 0, 0.3);
-  }
-  50% {
-      box-shadow: 0 0 20px 5px #ffeb3b, 0 0 20px rgba(0, 0, 0, 0.3);
-  }
-  100% {
-      box-shadow: 0 0 20px 5px #ffeb3b, 0 0 20px rgba(0, 0, 0, 0.2);
-  }
-}
-
-/* Botón para cerrar el chat (ubicado en la esquina superior derecha del chatbot) */
-.close-chat-btn {
-  position: fixed; /* Posiciona el botón de manera absoluta dentro del contenedor más cercano con posición relativa */
-  top: 20px; /* Establece la distancia desde la parte superior del contenedor */
-  right: 20px; /* Establece la distancia desde el borde derecho del contenedor */
-  background-color: transparent; /* Hace el fondo del botón transparente, sin color de fondo */
-  color: #000000; /* Negro - Establece el color del texto o ícono dentro del botón */
-  border: none; /* Elimina cualquier borde predeterminado del botón */
-  font-size: 30px; /* Define el tamaño del texto o ícono dentro del botón */
-  cursor: pointer; /* Cambia el cursor a una mano cuando el usuario pasa sobre el botón (indica que es clickeable) */
-  padding: 0; /* Elimina cualquier espacio interno alrededor del contenido del botón */
-  transition: color 0.3s ease; /* Agrega una transición suave de 0.3 segundos al cambiar el color del texto */
-  z-index: 10; /* Asegura que el botón esté encima de otros elementos en la página (evita que se cubra con otros elementos) */
-}
-
-.close-chat-btn:hover {
-  color: #000000; /* Cambia el color del texto a negro cuando el usuario pasa el cursor sobre el botón */
-}
-
-/* NUEVO: Asegurar que el botón de cerrar y el contenedor del chat se adapten a pantallas móviles */
-@media screen and (max-width: 600px) {
-  .close-chat-btn {
-      font-size: 25px; /* Tamaño reducido */
-      top: 5px; /* Ajustar para pantallas pequeñas */
-      right: 5px;
-  }
-
-  .chat-container {
-      width: 90%; /* Adaptar el ancho */
-      bottom: 60px; /* Ajustar para dispositivos pequeños */
-      right: 5%; /* Centrar en pantalla */
-      max-height: calc(100vh - 80px); /* Limitar altura en pantallas pequeñas */
-      overflow-y: auto; /* Habilitar desplazamiento si es necesario */
-  }
-
-  #chatbox {
-      max-height: calc(100vh - 160px); /* Asegurar espacio para el contenido del chat */
-  }
-}
-
-/* Estilos para el chat */
 #chatbox {
-  flex: 1;
-  padding: 15px;
-  overflow-y: auto; /* Agregar desplazamiento en el chat */
-  max-height: 146px; /* Altura máxima para el área de chat */
-  border-bottom: 1px solid #ddd;
-  background-color: #f9f9f9;
-  border-radius: 0 0 10px 10px;
   display: flex;
-  flex-direction: column; /* Asegurar que los mensajes se apilen verticalmente */
-  gap: 10px;
-  justify-content: flex-end; /* Asegurar que el contenido esté alineado al fondo */
-}
-
-/* Estilos de los mensajes */
-.bot-message, .user-message {
+  flex-direction: column;
+  height: 100%;
   padding: 10px;
-  border-radius: 8px;
-  max-width: 70%;
-  word-wrap: break-word;
-  transition: transform 0.3s ease;
-  align-self: flex-end; /* Alineación a la derecha */
-  margin-bottom: 10px; /* Separar los mensajes */
 }
 
-/* La pregunta estará ahora a la derecha */
-.user-message {
-  background-color: #ffeb3b; /* Amarillo */
-  color: #2e7d32; /* Verde oscuro */
-}
-
-/* La respuesta estará ahora a la derecha */
-.bot-message {
-  background-color: #2e7d32; /* Verde */
-  color: #fff; /* Blanco para el texto */
-}
-
-/* Animación de aparición para los mensajes */
-.bot-message:hover, .user-message:hover {
-  transform: scale(1.05);
-}
-
-/* Área de las preguntas */
 .question-area {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: 10px;
-  background-color: #f9f9f9;
-  border-top: 1px solid #ddd;
-  border-radius: 0 0 10px 10px;
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 20px; /* Espacio adicional para evitar el choque con el botón de cerrar */
 }
 
-/* Botones de preguntas */
-.question-btn {
-  background-color: #ffeb3b; /* Amarillo */
-  color: #2e7d32; /* Verde */
+#close-chat-btn {
+  background-color: #4CAF50;
+  color: rgb(0, 0, 0);
   border: none;
+  padding: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  /* En dispositivos móviles o pantallas pequeñas */
+  
+  #open-chat-btn {
+    font-size: 10px; /* Reducir tamaño del texto del botón */
+    padding: 0.3rem 0.6rem; /* Botón más pequeño */
+    bottom: 80px; /* Más arriba para evitar solaparse con otros elementos */
+  }
+
+  #chat-container {
+    width: 250px; /* Reducir el ancho del chat */
+    height: 350px; /* Reducir la altura del chat */
+    bottom: 80px; /* Posición más arriba para evitar la navbar */
+  }
+
+  #chat-container.opened {
+    bottom: 200px; /* Ajustar la posición cuando el chat se abre */
+  }
+
+  /* Ajuste de la pregunta y área de mensajes */
+  .question-area {
+    font-size: 12px; /* Hacer el texto de las preguntas más pequeño */
+    padding: 0.5rem; /* Asegurarse de que el área de preguntas esté bien espaciada */
+  }
+}
+
+/* Ajuste aún más pequeño en dispositivos muy pequeños como teléfonos */
+@media (max-width: 480px) {
+  #open-chat-btn {
+    font-size: 8px; /* Botón más pequeño */
+    padding: 0.2rem 0.5rem; /* Botón aún más pequeño */
+    bottom: 70px; /* Asegurar que no se solape */
+  }
+
+  #chat-container {
+    width: 200px; /* Reducir aún más el ancho del chat */
+    height: 300px; /* Reducir la altura del chat */
+    bottom: 70px; /* Más arriba */
+  }
+
+  #chat-container.opened {
+    bottom: 150px; /* Ajustar la posición aún más */
+  }
+
+  /* Ajuste de la pregunta y área de mensajes */
+  .question-area {
+    font-size: 10px; /* Texto más pequeño */
+    padding: 0.3rem; /* Reducir padding para el área de preguntas */
+  }
+}
+
+/* Estilos para las preguntas y respuestas */
+.user-message {
+  background-color: #4CAF50; /* Fondo verde para preguntas */
+  color: white;
+  padding: 8px;
+  margin-bottom: 10px;
   border-radius: 5px;
-  padding: 12px 15px;
-  cursor: pointer;
-  font-size: 16px;
-  flex: 1 1 calc(50% - 10px);
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  max-width: 80%;
+  align-self: flex-start; /* Alinear a la izquierda */
 }
 
-.question-btn:hover {
-  background-color: #cddc39; /* Verde más suave */
-  transform: scale(1.1); /* Efecto de ampliación */
-}
-
-/* Botón para abrir el chat (ubicado en la esquina inferior derecha) */
-.open-chat-btn {
-  position: fixed;
-  bottom: 62px; /* Ajustado para mover más abajo */
-  right: 80px; /* Mover a la derecha */
-  background-color: #25D366; /* Verde de la ia */
-  color: #000000; /* Verde */
-  border: none;
-  border-radius: 50%;
-  width: 100px; /* Tamaño más pequeño */
-  height: 40px; /* Tamaño más pequeño */
-  font-size: 14px; /* Fuente más pequeña */
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.open-chat-btn:hover {
-  background-color: #cddc39; /* Amarillo más suave */
-  transform: scale(1.1); /* Efecto de ampliación */
+.bot-message {
+  background-color: #FFEB3B; /* Fondo amarillo para respuestas */
+  color: black;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  max-width: 80%;
+  align-self: flex-end; /* Alinear a la derecha */
 }
