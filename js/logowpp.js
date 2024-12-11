@@ -4,7 +4,8 @@
     function createWhatsappButton() {
         // Crear el contenedor del botón
         const button = document.createElement('a');
-        button.href = "https://wa.me/573042063568";  // Cambia este número por tu propio número
+        const message = "¡Buen día!";  // El mensaje predefinido para enviar en WhatsApp
+        button.href = `https://wa.me/573042063568?text=${encodeURIComponent(message)}`;  // Cambia este número por tu propio número y agrega el mensaje
         button.target = "_blank"; // Abrir el enlace en una nueva ventana
         button.id = "whatsapp-button"; // Asignamos un ID al botón
 
@@ -42,11 +43,6 @@
             button.classList.add('show'); // Asegúrate de tener esta clase en tu CSS para la animación
         };
     }
-
-    // Función para mostrar el mensaje "Buen día"
-    window.onload = function() {
-        alert("¡Buen día!");  // Muestra el mensaje al cargar la página
-    };
 
     // Crear el botón de WhatsApp
     const whatsappButton = createWhatsappButton();

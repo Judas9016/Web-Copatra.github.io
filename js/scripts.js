@@ -58,24 +58,24 @@ window.addEventListener('DOMContentLoaded', event => {
 // Datos de las noticias
 const newsData = [
     {
-      title: "Asesinato dentro de los buses de Copatra",
-      content: "El trágico asesinato de Fredy Ramírez Jaramillo, un conductor de 39 años, ocurrido en la parte baja del barrio Buenos Aires, desencadenó un paro de actividades por parte de los conductores de la empresa Copatra. Este cese de operaciones dejó fuera de servicio a 63 buses y afectó gravemente a los residentes de tres importantes sectores del nororiente de Medellín: Caicedo, Villatina y Santa Lucía.Ante esta delicada situación, las autoridades locales implementaron de inmediato un plan de contingencia para evitar que las vías fueran bloqueadas, mientras trabajaban para garantizar la movilidad en la zona. La Policía intensificó los patrullajes en las áreas afectadas, buscando preservar la seguridad de los ciudadanos, quienes se vieron obligados a buscar alternativas de transporte como caminar, usar taxis o desplazarse en bicicletas Como parte de las medidas adoptadas, las fuerzas policiales pusieron a disposición cuatro buses para facilitar el traslado de los habitantes y mitigar los inconvenientes generados por la falta de servicio de transporte público regular. Este hecho ha puesto en evidencia los riesgos a los que están expuestos los conductores y la necesidad de reforzar las medidas de seguridad para proteger tanto a los trabajadores del transporte como a los usuarios que dependen de este servicio en la ciudad.",
-      media: "<img src='assets/img/noticias/barrio-caicedo-paro-de-buses-1-e.jpg' alt='Imagen de noticia'>"
+      title: "Copatra celebra el Día del Conductor en reconocimiento a su labor",
+      content: "¡Feliz Día del Conductor! En Copatra, queremos agradecer a todos nuestros conductores por su dedicación, esfuerzo y compromiso diario en mantener el servicio de transporte seguro y eficiente. Su profesionalismo y responsabilidad son clave para brindar un viaje cómodo a nuestros pasajeros. ¡Gracias por ser parte fundamental de nuestra familia Copatra!",
+      media: "<img src='assets/img/noticias/SaveClip.App_451087557_2253702934972318_535772522667116551_n.jpg' alt='Imagen de noticia'>"
     },
     {
-      title: "Aumento de Pasajeros en las Rutas",
-      content: "El número de pasajeros en nuestras rutas ha aumentado un 20% en el último mes, lo que demuestra la eficiencia de nuestro servicio.",
-      media: "<video src='assets/img/noticias/' controls></video>"
+      title: "Habitante de calle lanza piedra a bus de Copatra en pleno centro de la ciudad",
+      content: "Un habitante de calle lanzó una piedra a un bus de Copatra en el centro de la ciudad, causando daños materiales al vehículo. Afortunadamente, no hubo personas heridas. Copatra trabaja con las autoridades para esclarecer el incidente y garantizar la seguridad de sus pasajeros.",
+      media: "<video src='assets/img/noticias/SaveClip.App_AQNIM4UV0-1cEjLAbf9dz7aO5Lor6PSIfwMt24CrfZlZek1ICMfXkF9067I6ECXse4Y_dR7TZ1ijYb_Jm-STeqMYgRvME5GaAhRb4bQ.mp4' controls></video>"
     },
     {
-      title: "Hola vecina, ¿me pone 5 mil en el tanque, sí?",
-      content: "En las primeras horas de la mañana de este miércoles 24 de marzo, un bus de servicio público perteneciente a la ruta de Caicedo terminó estrellándose contra la fachada de una vivienda, en un hecho que generó alarma en la comunidad. Según los reportes iniciales, el incidente ocurrió mientras el vehículo transitaba por la calle 53 con carrera 27, en el barrio Enciso, cuando aparentemente sufrió una falla en el sistema de frenos, lo que provocó que el conductor perdiera el control y colisionara directamente con la estructura de la casa. Afortunadamente, no se reportaron víctimas fatales como resultado de este accidente. Sin embargo, se confirmó que unas 15 personas resultaron con heridas de diversa consideración, además de los daños materiales ocasionados tanto al bus como a la fachada de la propiedad afectada. Los heridos fueron atendidos de inmediato por equipos de emergencia que acudieron al lugar de los hechos. En total, se desplazaron al sitio ocho ambulancias de la Secretaría de Salud de Medellín y dos máquinas del cuerpo de bomberos de la ciudad, las cuales coordinaron las labores de rescate y brindaron atención médica a los lesionados. Las autoridades locales se encuentran investigando las circunstancias exactas que rodearon el accidente, con el fin de esclarecer si la falla mecánica fue el único factor involucrado o si existieron otros elementos que contribuyeron al choque. El incidente ha puesto nuevamente en discusión la importancia de garantizar el mantenimiento adecuado de los vehículos de transporte público y de reforzar las medidas de seguridad vial, para prevenir este tipo de situaciones que no solo generan daños materiales, sino que también ponen en riesgo la vida y la integridad de los pasajeros y transeúntes.",
-      media: "<img src='assets/img/noticias/Choque-678x381.jpg' alt='Imagen de noticia'>"
+      title: "Segundo Semestre de Pico y Placa 2024: Nuevas Normas y Horarios para la Ciudad",
+      content: "",
+      media: "<img src='assets/img/noticias/SaveClip.App_469334932_17984347511758724_337435416969219943_n.jpg' alt='Imagen de noticia'>"
     },
     {
-      title: "Devuélvanme mis 50 pesos.",
-      content: "La situación con los habitantes de calle en Medellín preocupa cada vez más, especialmente al sector del transporte público. El pasado 29 de octubre, un bus de la empresa COPATRA fue atacado con una piedra en La Minorista, causando daños en una ventana trasera. Este es el segundo incidente similar en tres días, luego de que otro bus de Circular Coonatra fuera agredido en la calle Barranquilla. Estos ataques no solo generan daños materiales, sino que también ponen en riesgo la vida de pasajeros y conductores. La ciudadanía y los transportadores exigen mayor seguridad, mientras las autoridades trabajan en soluciones integrales que aborden tanto la seguridad pública como la situación de vulnerabilidad de los habitantes de calle. Las empresas de transporte piden más patrullajes y estrategias para prevenir nuevos ataques.",
-      media: "<img src='assets/img/noticias/WhatsApp-Image-2024-10-29-at-4.06.43-PM.jpeg' alt='Imagen de noticia'>"
+      title: "Copatra Celebra 60 Años de Servicio y Compromiso con la Comunidad",
+      content: "Copatra celebra con orgullo sus 60 años de historia, brindando transporte seguro y eficiente a miles de personas. A lo largo de seis décadas, hemos crecido junto a nuestra comunidad, manteniendo siempre el compromiso de ofrecer un servicio de calidad y confianza. Gracias a todos los que han sido parte de este viaje, ¡y seguimos avanzando juntos hacia un futuro lleno de éxitos!",
+      media: "<img src='assets/img/noticias/SaveClip.App_469476266_17984347649758724_9028405384172317496_n.jpg' alt='Imagen de noticia'>"
     }
   ];
   
