@@ -43,6 +43,11 @@
         };
     }
 
+    // Función para mostrar el mensaje "Buen día"
+    window.onload = function() {
+        alert("¡Buen día!");  // Muestra el mensaje al cargar la página
+    };
+
     // Crear el botón de WhatsApp
     const whatsappButton = createWhatsappButton();
 

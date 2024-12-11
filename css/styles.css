@@ -11846,8 +11846,20 @@ header {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 20px;
 }
+
+.footer-images img {
+  width: 150px; /* Ajusta el tamaño según lo necesites */
+  height: auto; /* Mantiene la proporción de la imagen */
+  margin: 10px; /* Espaciado entre las imágenes */
+  object-fit: contain; /* Asegura que la imagen se ajusta dentro de su contenedor */
+}
+
+/* Estilo para la imagen de fallback */
+.footer-images img[src="assets/img/logos/default.png"] {
+  border: 1px solid #ccc; /* Opcional: borde para la imagen por defecto */
+}
+
 
 .footer-images a {
   margin: 5px;  /* Reduce el margen para que las imágenes no estén tan separadas */
@@ -11869,7 +11881,7 @@ header {
   font-size: 12px;
 }
 
-/* From Uiverse.io by david-mohseni */ 
+/* ia */ 
 .wrapper {
   display: inline-flex;
   list-style: none;
