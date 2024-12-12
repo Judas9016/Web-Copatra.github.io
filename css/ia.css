@@ -76,6 +76,8 @@
   flex-direction: column;
   height: 100%;
   padding: 10px;
+  word-wrap: break-word;  /* Asegura que el texto largo se ajuste */
+  overflow-y: auto;  /* Permite que el área de mensajes sea desplazable si se llena */
 }
 
 .question-area {
@@ -118,6 +120,10 @@
     font-size: 12px; /* Hacer el texto de las preguntas más pequeño */
     padding: 0.5rem; /* Asegurarse de que el área de preguntas esté bien espaciada */
   }
+
+  .user-message, .bot-message {
+    max-width: 90%;  /* Ajustar el ancho de los mensajes */
+  }
 }
 
 /* Ajuste aún más pequeño en dispositivos muy pequeños como teléfonos */
@@ -143,6 +149,10 @@
     font-size: 10px; /* Texto más pequeño */
     padding: 0.3rem; /* Reducir padding para el área de preguntas */
   }
+
+  .user-message, .bot-message {
+    max-width: 90%;  /* Asegura que los mensajes no se salgan */
+  }
 }
 
 /* Estilos para las preguntas y respuestas */
@@ -154,6 +164,7 @@
   border-radius: 5px;
   max-width: 80%;
   align-self: flex-start; /* Alinear a la izquierda */
+  word-wrap: break-word;  /* Ajusta las palabras largas */
 }
 
 .bot-message {
@@ -164,4 +175,5 @@
   border-radius: 5px;
   max-width: 80%;
   align-self: flex-end; /* Alinear a la derecha */
+  word-wrap: break-word;  /* Ajusta las palabras largas */
 }
