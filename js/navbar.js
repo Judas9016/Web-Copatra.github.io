@@ -2,10 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const navItems = [
         // Enlace para "Rutas", ajustado para comportarse de manera diferente en home y en otras páginas
         { href: "index.html", text: "Rutas" },
-        { href: "servicios.html", text: "Servicios" },
+        { href: "servicios.html", text: "Equipo de trabajo" },
         { href: "empresa.html", text: "Empresa" },
         { href: "https://beewo.herokuapp.com/formatos/generate_questions/rHpHfKE5ZTMCNVymBKCDHe2s/0/0", text: "PQRS" },
-        { href: "EquipoDeTrabajo.html", text: "Equipo de trabajo" },
         { href: "#contact", text: "Contáctanos" }, // Aquí agregamos el enlace "Contactanos"
         { href: "ubicanos.html", text: "Ubícanos" } 
     ];
@@ -116,10 +115,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // Datos de los enlaces en el footer
     const navbarLinks = [
         { href: "index.html", text: "Inicio" },
-        { href: "servicios.html", text: "Servicios" },
+        { href: "servicios.html", text: "Equipo de trabajo" },
         { href: "empresa.html", text: "Empresa" },
         { href: "https://beewo.herokuapp.com/formatos/generate_questions/rHpHfKE5ZTMCNVymBKCDHe2s/0/0", text: "PQRS", target: "_blank" }, // Solo PQRS abrirá en una nueva pestaña
-        { href: "EquipoDeTrabajo.html", text: "Equipo de trabajo" },
         { href: "index.html", text: "Contáctanos" },
         { href: "ubicanos.html", text: "Ubícanos" },
         { href: "politica-privacidad.html", text: "Política de SST y Política de Seguridad Vial" }

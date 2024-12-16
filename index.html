@@ -233,10 +233,22 @@
 
         <!-- Modales de cartera-->
         <!-- Ventana emergente modal del elemento de cartera 1-->
+        <style>
+            /* Asegurarse de que los iframes son responsivos */
+            .modal-body iframe {
+                width: 100%; /* Ancho al 100% del contenedor */
+                height: 400px; /* Establecer una altura fija o puedes ajustarlo con una proporción */
+                max-width: 100%; /* No debe exceder el 100% del contenedor */
+                aspect-ratio: 16/9; /* Mantener una relación de aspecto estándar (16:9), ajustable */
+            }
+        </style>
+        
         <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/X Cerrar.svg" alt="Close modal" /></div>
+                    <div class="close-modal" data-bs-dismiss="modal">
+                        <img src="assets/img/X Cerrar.svg" alt="Close modal" />
+                    </div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
@@ -244,21 +256,16 @@
                                     <!-- Detalles del proyecto-->
                                     <h2 class="text-uppercase">Pinal</h2>
                                     <p class="item-intro text-muted">"De 7 a 9: intercambio entre el bus de Alpujarra y el de Minorista."</p>
-                                    <iframe src="https://www.google.com/maps/d/embed?mid=1CYCELtdkCUsTWXZBBm0fi-r5q1TKQys&ehbc=2E312F" width="640" height="480"></iframe>
+                                    <div class="map-responsive">
+                                        <iframe src="https://www.google.com/maps/d/embed?mid=1CYCELtdkCUsTWXZBBm0fi-r5q1TKQys&ehbc=2E312F&noprof=1"></iframe>
+                                    </div>
                                     <p></p>
                                     <ul class="list-inline">
-                                        <li>
-                                            <strong>Inicio:</strong>
-                                            Pinal
-                                        </li>
-                                        <li>
-                                            <strong>Fin:</strong>
-                                           Alpujarra-Minorista
-                                        </li>
+                                        <li><strong>Inicio:</strong> Pinal</li>
+                                        <li><strong>Fin:</strong> Alpujarra-Minorista</li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Cerrar
+                                        <i class="fas fa-xmark me-1"></i> Cerrar
                                     </button>
                                 </div>
                             </div>
@@ -267,11 +274,13 @@
                 </div>
             </div>
         </div>
-        <!-- Ventana emergente modal del artículo 2 de la cartera-->
+        
         <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/X Cerrar.svg" alt="Close modal" /></div>
+                    <div class="close-modal" data-bs-dismiss="modal">
+                        <img src="assets/img/X Cerrar.svg" alt="Close modal" />
+                    </div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
@@ -279,21 +288,16 @@
                                     <!-- Detalles del proyecto-->
                                     <h2 class="text-uppercase">Llanadas</h2>
                                     <p class="item-intro text-muted">"De 7 a 9: intercambio entre el bus de Camino Real y el de Minorista."</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/Ruta091.jpeg" alt="..." />
+                                    <div class="map-responsive">
+                                        <iframe src="https://www.google.com/maps/d/embed?mid=1Q7kcT08VhVmWnNBxjSlU-wU74l12qpY&ehbc=2E312F&noprof=1"></iframe>
+                                    </div>
                                     <p></p>
                                     <ul class="list-inline">
-                                        <li>
-                                            <strong>Inicio:</strong>
-                                            Llanadas
-                                        </li>
-                                        <li>
-                                            <strong>Fin:</strong>
-                                            Camino Real-Minorista
-                                        </li>
+                                        <li><strong>Inicio:</strong> Llanadas</li>
+                                        <li><strong>Fin:</strong> Camino Real-Minorista</li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Cerrar 
+                                        <i class="fas fa-xmark me-1"></i> Cerrar
                                     </button>
                                 </div>
                             </div>
@@ -302,11 +306,13 @@
                 </div>
             </div>
         </div>
-        <!-- Ventana emergente modal del artículo 3 de la cartera-->
+        
         <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/X Cerrar.svg" alt="Close modal" /></div>
+                    <div class="close-modal" data-bs-dismiss="modal">
+                        <img src="assets/img/X Cerrar.svg" alt="Close modal" />
+                    </div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
@@ -314,21 +320,16 @@
                                     <!-- Detalles del proyecto-->
                                     <h2 class="text-uppercase">Villa Liliam (CAICEDO)</h2>
                                     <p class="item-intro text-muted"></p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/Ruta093.jpeg" alt="..." />
+                                    <div class="map-responsive">
+                                        <iframe src="https://www.google.com/maps/d/embed?mid=1iILasnR-yT0Y_n3-Loe1gsrq2haEeA0&ehbc=2E312F&noprof=1"></iframe>
+                                    </div>
                                     <p></p>
                                     <ul class="list-inline">
-                                        <li>
-                                            <strong>Inicio:</strong>
-                                            Villa Liliam
-                                        </li>
-                                        <li>
-                                            <strong>Fin:</strong>
-                                            Cuadradero Palacé
-                                        </li>
+                                        <li><strong>Inicio:</strong> Villa Liliam</li>
+                                        <li><strong>Fin:</strong> Cuadradero Palacé</li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Cerrar
+                                        <i class="fas fa-xmark me-1"></i> Cerrar
                                     </button>
                                 </div>
                             </div>
@@ -337,11 +338,13 @@
                 </div>
             </div>
         </div>
-        <!-- Ventana emergente modal del artículo 4 de la cartera-->
+        
         <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/X Cerrar.svg" alt="Close modal" /></div>
+                    <div class="close-modal" data-bs-dismiss="modal">
+                        <img src="assets/img/X Cerrar.svg" alt="Close modal" />
+                    </div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
@@ -349,21 +352,16 @@
                                     <!-- Detalles del proyecto-->
                                     <h2 class="text-uppercase">Santa Lucia.</h2>
                                     <p class="item-intro text-muted">"De 7 a 9: intercambio entre el bus de ..."</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/Ruta094.jpeg" alt="..." />
+                                    <div class="map-responsive">
+                                        <iframe src="https://www.google.com/maps/d/embed?mid=11C4vfiTpPKuKhexw0GjC1wvSA2DPhgQ&ehbc=2E312F&noprof=1"></iframe>
+                                    </div>
                                     <p></p>
                                     <ul class="list-inline">
-                                        <li>
-                                            <strong>Inicio:</strong>
-                                            Santa Lucia.
-                                        </li>
-                                        <li>
-                                            <strong>Fin:</strong>
-                                            Minorista
-                                        </li>
+                                        <li><strong>Inicio:</strong> Santa Lucia.</li>
+                                        <li><strong>Fin:</strong> Minorista</li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Cerrar 
+                                        <i class="fas fa-xmark me-1"></i> Cerrar
                                     </button>
                                 </div>
                             </div>
@@ -372,11 +370,13 @@
                 </div>
             </div>
         </div>
-        <!-- Ventana emergente modal del elemento de cartera 5-->
+        
         <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/X Cerrar.svg" alt="Close modal" /></div>
+                    <div class="close-modal" data-bs-dismiss="modal">
+                        <img src="assets/img/X Cerrar.svg" alt="Close modal" />
+                    </div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
@@ -384,21 +384,16 @@
                                     <!-- Detalles del proyecto-->
                                     <h2 class="text-uppercase">Villatina</h2>
                                     <p class="item-intro text-muted">"De 7 a 9: intercambio entre el bus de ..."</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/Ruta095.jpeg" alt="..." />
+                                    <div class="map-responsive">
+                                        <iframe src="https://www.google.com/maps/d/embed?mid=1_ZU6Y03zrPZ0fqZMoTEyA0rqgGVw8mM&ehbc=2E312F&noprof=1"></iframe>
+                                    </div>
                                     <p></p>
                                     <ul class="list-inline">
-                                        <li>
-                                            <strong>Inicio:</strong>
-                                            Villanita
-                                        </li>
-                                        <li>
-                                            <strong>Fin:</strong>
-                                            Minorista
-                                        </li>
+                                        <li><strong>Inicio:</strong> Villanita</li>
+                                        <li><strong>Fin:</strong> Minorista</li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Cerrar 
+                                        <i class="fas fa-xmark me-1"></i> Cerrar
                                     </button>
                                 </div>
                             </div>
@@ -407,11 +402,13 @@
                 </div>
             </div>
         </div>
-        <!-- Ventana emergente modal del elemento de cartera 6-->
+        
         <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/X Cerrar.svg" alt="Close modal" /></div>
+                    <div class="close-modal" data-bs-dismiss="modal">
+                        <img src="assets/img/X Cerrar.svg" alt="Close modal" />
+                    </div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
@@ -419,21 +416,16 @@
                                     <!-- Detalles del proyecto-->
                                     <h2 class="text-uppercase">Palmas</h2>
                                     <p class="item-intro text-muted"></p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/Ruta112.JPG" alt="..." />
+                                    <div class="map-responsive">
+                                        <iframe src="https://www.google.com/maps/d/embed?mid=1B8V4CYKRjj2jc6jxUZ4ejY554LK5TlU&ehbc=2E312F&noprof=1"></iframe>
+                                    </div>
                                     <p></p>
                                     <ul class="list-inline">
-                                        <li>
-                                            <strong>Inicio:</strong>
-                                            Morro cristo
-                                        </li>
-                                        <li>
-                                            <strong>Fin:</strong>
-                                            Palmas
-                                        </li>
+                                        <li><strong>Inicio:</strong> Morro Cristo</li>
+                                        <li><strong>Fin:</strong> Palmas</li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Cerrar
+                                        <i class="fas fa-xmark me-1"></i> Cerrar
                                     </button>
                                 </div>
                             </div>
@@ -442,6 +434,7 @@
                 </div>
             </div>
         </div>
+                </div>
         <!-- Núcleo de arranque JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Tema principal JS-->

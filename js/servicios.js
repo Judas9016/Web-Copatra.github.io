@@ -1,16 +1,42 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Datos de los servicios con imágenes
   const serviciosData = [
-    { icono: "assets/img/servicios/controladores.jpg", titulo: "Controladores", descripcion: "Los controladores de Copatra son esenciales para garantizar el funcionamiento eficiente y seguro de nuestras rutas." },
-    { icono: "assets/img/servicios/IMG_4607.webp", titulo: "Contratación", descripcion: "En Copatra, creemos que el éxito de nuestro servicio comienza con un equipo comprometido y capacitado." },
-    { icono: "assets/img/servicios/PHOTO-2024-05-07-12-04-20.JPG", titulo: "Gerente", descripcion: "El gerente de Copatra lidera nuestro equipo con una visión clara y estratégica, enfocado en ofrecer un servicio de calidad." },
-    { icono: "assets/img/servicios/mantenimiento.jpg", titulo: "Mantenimiento", descripcion: "Realizamos un mantenimiento preventivo y correctivo continuo en nuestras unidades para garantizar la seguridad de los pasajeros." },
-    { icono: "assets/img/servicios/IMG_4555 (1).jpg", titulo: "Atención al Cliente", descripcion: "Contamos con un equipo de atención al cliente dispuesto a resolver cualquier duda o inconveniente de nuestros pasajeros." },
-    { icono: "assets/img/servicios/IMG_4557.jpg", titulo: "Monitoreo de Rutas", descripcion: "Implementamos tecnología de monitoreo de rutas en tiempo real, optimizando los tiempos de traslado y mejorando la experiencia del usuario." }
+    {
+      icono: "assets/img/servicios/controladores.jpg",
+      titulo: "Controladores",
+      descripcion: "Los controladores de Copatra son esenciales para garantizar el funcionamiento eficiente y seguro de nuestras rutas."
+    },
+    {
+      icono: "assets/img/servicios/IMG_4607.webp",
+      titulo: "Contratación",
+      descripcion: "En Copatra, creemos que el éxito de nuestro servicio comienza con un equipo comprometido y capacitado."
+    },
+    {
+      icono: "assets/img/servicios/PHOTO-2024-05-07-12-04-20.JPG",
+      titulo: "Gerente",
+      descripcion: "El gerente de Copatra lidera nuestro equipo con una visión clara y estratégica, enfocado en ofrecer un servicio de calidad."
+    },
+    {
+      icono: "assets/img/servicios/mantenimiento.jpg",
+      titulo: "Mantenimiento",
+      descripcion: "Realizamos un mantenimiento preventivo y correctivo continuo en nuestras unidades para garantizar la seguridad de los pasajeros."
+    },
+    {
+      icono: "assets/img/servicios/IMG_4555 (1).jpg",
+      titulo: "Atención al Cliente",
+      descripcion: "Contamos con un equipo de atención al cliente dispuesto a resolver cualquier duda o inconveniente de nuestros pasajeros."
+    },
+    {
+      icono: "assets/img/servicios/IMG_4557.jpg",
+      titulo: "Monitoreo de Rutas",
+      descripcion: "Implementamos tecnología de monitoreo de rutas en tiempo real, optimizando los tiempos de traslado y mejorando la experiencia del usuario."
+    }
   ];
 
-  // Contenedor de servicios
   const serviciosContainer = document.querySelector("#servicios-container");
+  const modal = document.querySelector("#modal");
+  const modalContent = document.querySelector("#modal-content");
+  const modalClose = document.querySelector("#modal-close-bottom"); // El botón de cierre en la parte inferior
+
   serviciosData.forEach(item => {
     const servicioDiv = document.createElement("div");
     servicioDiv.classList.add("servicio");
@@ -22,7 +48,55 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
 
     serviciosContainer.appendChild(servicioDiv);
+
+    // Abrir popup si es Gerente
+    if (item.titulo === "Gerente") {
+      servicioDiv.addEventListener("click", function () {
+        // Limpiar el contenido anterior del modal
+        modalContent.innerHTML = `
+          <h2>Habilidades</h2>
+          <div class="habilidades-container">
+            <ul class="habilidades">
+              <li>Liderazgo</li>
+              <li>Comunicación</li>
+              <li>Gestión Estratégica</li>
+              <li>Resolución de Problemas</li>
+              <li>Visión Estratégica</li>
+            </ul>
+          </div>
+          <p>
+            El gerente de Copatra lidera con visión estratégica, capacidad de resolución de problemas, habilidades de liderazgo,
+            comunicación efectiva y experiencia en gestión del transporte público.
+          </p>
+          <div class="modal-img-container">
+            <img src="${item.icono}" alt="${item.titulo}">
+          </div>
+        `;
+        // Añadir el botón de cierre después de insertar el contenido dinámico
+        modalContent.innerHTML += `
+          <button id="modal-close-bottom">Cerrar</button>
+        `;
+        modal.style.display = "flex"; // Mostrar el modal
+      });
+    }
   });
+
+  // Cerrar el popup cuando se hace clic en el botón de cierre en la parte inferior
+  modal.addEventListener("click", function (e) {
+    if (e.target && e.target.id === "modal-close-bottom") {
+      modal.style.display = "none";
+    }
+  });
+
+  // Cerrar el popup si se hace clic fuera del contenido establecido
+  window.addEventListener("click", function (e) {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+
+
+
 
   // Datos de Comentarios con imágenes
   const testimoniosData = [
