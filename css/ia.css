@@ -2,7 +2,7 @@
 #open-chat-btn {
   font-size: 9px; /* Botón más pequeño */
   background-color: #008542;
-  color: #000000;
+  color: #ffffff;
   text-shadow: 0 2px 0 rgb(0 0 0 / 25%);
   display: inline-flex;
   align-items: center;
@@ -33,14 +33,18 @@
   transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
   z-index: -1;
   background-color: #25D366 !important;
-  box-shadow: 0 -4px rgb(238, 253, 31, 0.99) inset,
-    0 4px rgba(238, 253, 31, 0.99) inset, -4px 0 rgb(238, 253, 31, 0.99) inset,
-    4px 0 rgb(238, 253, 31, 0.99) inset;
+  box-shadow: 0 -4px rgb(008542) inset,
+    0 4px rgba(008542) inset, -4px 0 rgb(008542) inset,
+    4px 0 rgb(008542) inset;
 }
 
 #open-chat-btn:hover:before {
-  box-shadow: 0 -4px rgb(0 0 0 / 50%) inset, 0 4px rgb(255 255 255 / 20%) inset,
-    -4px 0 rgb(255 255 255 / 20%) inset, 4px 0 rgb(0 0 0 / 50%) inset;
+  box-shadow: 
+  0 -4px rgba(255, 223, 0, 0.6) inset, /* Amarillo brillante en la parte superior */
+  0 4px rgba(255, 249, 196, 0.3) inset, /* Amarillo claro en la parte inferior */
+ -4px 0 rgba(255, 239, 128, 0.4) inset, /* Amarillo dorado en la izquierda */
+  4px 0 rgba(255, 213, 0, 0.5) inset; /* Amarillo más oscuro en la derecha */
+
 }
 
 #open-chat-btn:active {

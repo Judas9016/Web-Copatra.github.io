@@ -1,0 +1,75 @@
+/* Estilo minimalista adaptado para enlaces con color negro */
+.minimal-link {
+    font-size: 18px;
+    color: black;
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Espaciado vertical entre los enlaces */
+  
+    transition: color 400ms cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+  
+  .minimal-link:focus,
+  .minimal-link:hover {
+    color: black; /* Mantiene el color negro incluso al hover */
+  }
+  
+  .minimal-link:focus:after,
+  .minimal-link:hover:after {
+    width: 100%; /* Línea se extiende completamente en hover */
+  }
+  
+  .minimal-link:after {
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background-color: black; /* Línea negra */
+    pointer-events: none;
+  
+    transition: width 500ms cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+  
+  .minimal-link .svg-icon {
+    width: 0.9em;
+    height: 0.8em;
+    margin-left: 10px;
+    fill: black; /* Color negro para el ícono */
+    transform: rotate(-45deg);
+    transition: transform 0.5s ease-out;
+  }
+  
+  .minimal-link:hover .svg-icon {
+    transform: rotate(0deg); /* Ícono se rota a su posición normal */
+    fill: black;
+  }
+  
+  /* Estilos responsive */
+  @media (max-width: 768px) { /* Dispositivos medianos (tabletas) */
+    .minimal-link {
+      font-size: 16px; /* Tamaño de fuente ligeramente más pequeño */
+      gap: 8px; /* Reduce el espacio vertical entre enlaces */
+    }
+  }
+  
+  @media (max-width: 576px) { /* Dispositivos pequeños (móviles) */
+    .minimal-link {
+      font-size: 14px; /* Reduce aún más el tamaño de la fuente */
+      gap: 6px; /* Reduce el espaciado para pantallas pequeñas */
+      align-items: flex-start; /* Alinea los enlaces al inicio */
+    }
+  
+    .minimal-link .svg-icon {
+      margin-left: 5px; /* Reduce el espacio del ícono */
+    }
+  }
+  
