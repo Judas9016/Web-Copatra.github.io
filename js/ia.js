@@ -27,91 +27,48 @@ const qaList = [
                 "95- VILLATINA: 3:57 a.m. a 21:30 p.m.\n\n" +
                 "112- PALMAS: 5:40 a.m. a 21:04 p.m."
     },
-    {
-        question: "¿Qué debo hacer si tengo alguna queja o sugerencia sobre el servicio?",
-        answer: "Si deseas presentar una queja o sugerencia sobre nuestro servicio, puedes hacerlo a través de los canales de atención de la cooperativa. Los vehículos cuentan con un código QR visible en cada unidad, que te redirigirá directamente a nuestra plataforma para radicar tu queja o sugerencia de manera fácil y rápida. Además, puedes acceder al siguiente enlace para completar el formulario correspondiente: Formulario de Quejas y Sugerencias. Nos comprometemos a revisar y responder a tu solicitud a la mayor brevedad posible."
-    },
-    {
-        question: "¿Cómo se actualiza la tarifa del pasaje y cuándo entra en vigencia?",
-        answer: "La tarifa del pasaje en Medellín es establecida anualmente por el gobierno local, específicamente por la Secretaría de Movilidad de la ciudad. Esta tarifa puede ajustarse cada año, generalmente en el mes de enero, de acuerdo con los lineamientos y decisiones del gobierno municipal. Los cambios en la tarifa son informados con antelación a través de medios oficiales."
-    },
-    {
-        question: "¿Cuáles son los horarios de atención?",
-        answer: "Nuestros horarios son de lunes a viernes de 8:00 AM a 6:00 PM."
-    },
+    
+    
+    
     {
         question: "¿Cuál es el horario de atención en la oficina de atención al cliente?",
         answer: "Nuestro horario de atención en la oficina es de lunes a viernes, de 7:00 a.m. a 1:00 p.m. y de 2:00 p.m. a 5:00 p.m. Durante este tiempo, nuestro equipo estará disponible para resolver tus dudas, ofrecerte información sobre nuestras rutas o ayudarte con cualquier trámite que necesites realizar."
     },
-    {
-        question: "¿Qué debo hacer si tengo alguna queja o sugerencia sobre el servicio?",
-        answer: "Si deseas presentar una queja o sugerencia sobre nuestro servicio, puedes hacerlo a través de los canales de atención de la cooperativa. Los vehículos cuentan con un código QR visible en cada unidad, que te redirigirá directamente a nuestra plataforma para radicar tu queja o sugerencia de manera fácil y rápida. Además, puedes acceder al siguiente enlace para completar el formulario correspondiente: Formulario de Quejas y Sugerencias. Nos comprometemos a revisar y responder a tu solicitud a la mayor brevedad posible."
-    },
-    {
-        question: "¿Cómo se actualiza la tarifa del pasaje y cuándo entra en vigencia?",
-        answer: "La tarifa del pasaje en Medellín es establecida anualmente por el gobierno local, específicamente por la Secretaría de Movilidad de la ciudad. Esta tarifa puede ajustarse cada año, generalmente en el mes de enero, de acuerdo con los lineamientos y decisiones del gobierno municipal. Los cambios en la tarifa son informados con antelación a través de medios oficiales."
-    },
+    
+    
     {
         question: "¿Cuáles son los horarios de atención?",
         answer: "Nuestros horarios son de lunes a viernes de 8:00 AM a 6:00 PM."
     },
-    {
-        question: "¿Cuál es el horario de atención en la oficina de atención al cliente?",
-        answer: "Nuestro horario de atención en la oficina es de lunes a viernes, de 7:00 a.m. a 1:00 p.m. y de 2:00 p.m. a 5:00 p.m. Durante este tiempo, nuestro equipo estará disponible para resolver tus dudas, ofrecerte información sobre nuestras rutas o ayudarte con cualquier trámite que necesites realizar."
-    },
+    
     {
         question: "¿Qué rutas y recorridos ofrece la empresa?",
         answer: `
-        <strong>SUCRE</strong><br>
-        <strong>090- PINAL</strong><br>
-        TERMINAL EL PINAL - ENGRASADERO - CONTROL EL ENANO - BIBLIOTECA LA LADERA - SECTOR ITM - BAJANDO PARA EL PARQUE DE BOSTON - AVENIDA ORIENTAL - SAN ANTONIO Y ALPUJARRA. (MINORISTA)<br><br>
+        SUCRE
+        090- PINAL
+        TERMINAL EL PINAL - ENGRASADERO - CONTROL EL ENANO - BIBLIOTECA LA LADERA - SECTOR ITM - BAJANDO PARA EL PARQUE DE BOSTON - AVENIDA ORIENTAL - SAN ANTONIO Y ALPUJARRA. (MINORISTA)
 
-        <strong>091- LLANADAS</strong><br>
-        TERMINAL – LLANADAS - DROGUERÍA LAS COLINAS - FERRETERÍA LA 28 - COLINAS DE ENCISO - Escuela Normal Superior de Medellín - CANCHA LOS MANGOS - PARROQUIA FEDERICO OZANAM - CONTROL CAI - BAJANDO PARA EL PARQUE DE BOSTON - AVENIDA ORIENTAL - SAN ANTONIO Y ALPUJARRA (MINORISTA)<br><br>
+        091- LLANADAS
+        TERMINAL – LLANADAS - DROGUERÍA LAS COLINAS - FERRETERÍA LA 28 - COLINAS DE ENCISO - Escuela Normal Superior de Medellín - CANCHA LOS MANGOS - PARROQUIA FEDERICO OZANAM - CONTROL CAI - BAJANDO PARA EL PARQUE DE BOSTON - AVENIDA ORIENTAL - SAN ANTONIO Y ALPUJARRA (MINORISTA)
 
-        <strong>CAICEDO</strong><br>
-        <strong>093- CAICEDO – LA TOMA- MINORISTA</strong><br>
-        Terminal 93 – salida - lavadero 093 - Tres Esquinas - Villatina - Escuela Miguel de Aguinaga – estrechura - Perlas control - Caracas bajando - Pablo Tobón Uribe - Playa bajando - clínica Soma - San Antonio bajando - Alpujarra bajando.<br><br>
+       CAICEDO
+        093- CAICEDO – LA TOMA- MINORISTA
+        Terminal 93 – salida - lavadero 093 - Tres Esquinas - Villatina - Escuela Miguel de Aguinaga – estrechura - Perlas control - Caracas bajando - Pablo Tobón Uribe - Playa bajando - clínica Soma - San Antonio bajando - Alpujarra bajando.
 
-        <strong>094- SANTA LUCÍA</strong><br>
-        Terminal 094 - Tres Esquinas – Villatina - Escuela Miguel de Aguinaga - estrechura - Perlas control - Caracas bajando - Pablo Tobón Uribe - Playa bajando - clínica Soma - San Antonio bajando – Alpujarra, MINORISTA.<br><br>
+      094- SANTA LUCÍA
+        Terminal 094 - Tres Esquinas – Villatina - Escuela Miguel de Aguinaga - estrechura - Perlas control - Caracas bajando - Pablo Tobón Uribe - Playa bajando - clínica Soma - San Antonio bajando – Alpujarra, MINORISTA.
 
-        <strong>095- VILLATINA, PERLAS, MINORISTA</strong><br>
-        Terminal 95 salida - Parqueadero salida 95 - Villatina - Escuela Miguel de Aguinaga - Perlas control - Caracas bajando - Pablo Tobón Uribe - Playa bajando - clínica Soma - San Antonio bajando – Alpujarra, Minorista.<br><br>
+        095- VILLATINA, PERLAS, MINORISTA
+        Terminal 95 salida - Parqueadero salida 95 - Villatina - Escuela Miguel de Aguinaga - Perlas control - Caracas bajando - Pablo Tobón Uribe - Playa bajando - clínica Soma - San Antonio bajando – Alpujarra, Minorista.
 
-        <strong>LAS PALMAS</strong><br>
-        <strong>112- PALMAS</strong>
+        LAS PALMAS
+        112- PALMAS
         `
     },
     {
         question: "¿Cómo puedo obtener información sobre las paradas y frecuencias de los autobuses?",
         answer: "Acercándose a cualquiera de nuestras terminales y puntos de control. Los vehículos cuentan con un rótulo donde se detallan los puntos estratégicos de las paradas de destino. Igualmente, puedes visitar nuestros puntos de atención digitales y físicos para solicitar información adicional."
     },
-
-    {
-        question: "¿Qué rutas y recorridos ofrece la empresa?",
-        answer: `
-        <strong>SUCRE</strong><br>
-        <strong>090- PINAL</strong><br>
-        TERMINAL EL PINAL - ENGRASADERO - CONTROL EL ENANO - BIBLIOTECA LA LADERA - SECTOR ITM - BAJANDO PARA EL PARQUE DE BOSTON - AVENIDA ORIENTAL - SAN ANTONIO Y ALPUJARRA. (MINORISTA)<br><br>
-
-        <strong>091- LLANADAS</strong><br>
-        TERMINAL – LLANADAS - DROGUERÍA LAS COLINAS - FERRETERÍA LA 28 - COLINAS DE ENCISO - Escuela Normal Superior de Medellín - CANCHA LOS MANGOS - PARROQUIA FEDERICO OZANAM - CONTROL CAI - BAJANDO PARA EL PARQUE DE BOSTON - AVENIDA ORIENTAL - SAN ANTONIO Y ALPUJARRA (MINORISTA)<br><br>
-
-        <strong>CAICEDO</strong><br>
-        <strong>093- CAICEDO – LA TOMA- MINORISTA</strong><br>
-        Terminal 93 – salida - lavadero 093 - Tres Esquinas - Villatina - Escuela Miguel de Aguinaga – estrechura - Perlas control - Caracas bajando - Pablo Tobón Uribe - Playa bajando - clínica Soma - San Antonio bajando - Alpujarra bajando.<br><br>
-
-        <strong>094- SANTA LUCÍA</strong><br>
-        Terminal 094 - Tres Esquinas – Villatina - Escuela Miguel de Aguinaga - estrechura - Perlas control - Caracas bajando - Pablo Tobón Uribe - Playa bajando - clínica Soma - San Antonio bajando – Alpujarra, MINORISTA.<br><br>
-
-        <strong>095- VILLATINA, PERLAS, MINORISTA</strong><br>
-        Terminal 95 salida - Parqueadero salida 95 - Villatina - Escuela Miguel de Aguinaga - Perlas control - Caracas bajando - Pablo Tobón Uribe - Playa bajando - clínica Soma - San Antonio bajando – Alpujarra, Minorista.<br><br>
-
-        <strong>LAS PALMAS</strong><br>
-        <strong>112- PALMAS</strong>
-        `
-    }
 ];
 
 // Función para agregar mensajes al chat

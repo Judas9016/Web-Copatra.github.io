@@ -10959,7 +10959,7 @@ header.masthead {
   padding-bottom: 6rem;
   text-align: center;
   color: #000; /* Cambiar el texto a negro para contraste */
-  background-color: #fff; /* Fondo blanco */
+  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)); /* Fondo blanco */
 }
 
 /* Contenedor principal */
@@ -11004,7 +11004,8 @@ header.masthead .collage-item {
 
 header.masthead .collage-item img {
   width: 100%;
-  height: 100%;
+  height: auto; /* Mantener la proporción de la imagen */
+  max-height: 150px; /* Altura máxima para mantener las imágenes pequeñas */
   object-fit: cover;
   transition: transform 0.3s ease;
 }
