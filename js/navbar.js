@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     // Datos para las imágenes del footer
     const footerImagesData = [
-        { url: 'https://www.instagram.com/asotransvaa?igsh=MXQ5a2dhNWx4NGh2Nw==', src: 'assets/img/logos/asotransvaa1.JPG', alt: 'Imagen 1' },
+        { url: 'https://www.instagram.com/asotransvaa?igsh=MXQ5a2dhNWx4NGh2Nw==', src: 'assets/img/logos/asotransvaa1.jpg ', alt: 'Imagen 1' },
         { url: 'https://www.fcm.org.co/simit/#/home-public', src: 'assets/img/logos/simit.png', alt: 'Imagen 2' },
         { url: 'https://www.medellin.gov.co/es/secretaria-de-movilidad/', src: 'assets/img/logos/secretariademovilidad.png', alt: 'Imagen 4' },
         { url: 'https://www.metropol.gov.co/', src: 'assets/img/logos/areametropolitana.png', alt: 'Imagen 3' },
@@ -83,31 +83,29 @@ document.addEventListener("DOMContentLoaded", function () {
         footerImagesContainer.appendChild(anchor);
     });
 
-    document.addEventListener('DOMContentLoaded', () => {
-        const socialIcons = document.querySelectorAll('.footer-social .icon');
-    
-        socialIcons.forEach(icon => {
-            icon.addEventListener('click', () => {
-                const link = icon.getAttribute('data-link');
-                let url = '';
-    
-                switch (link) {
-                    case 'facebook':
-                        url = 'https://www.facebook.com/profile.php?id=61569216698408';
-                        break;
-                    case 'twitter':
-                        url = 'https://x.com/Copatra60';
-                        break;
-                    case 'instagram':
-                        url = 'https://www.instagram.com/copatra.60/?next=%2F';
-                        break;
-                    default:
-                        url = '#';
-                        break;
-                }
-    
-                window.open(url, '_blank'); // Abre el enlace en una nueva pestaña
-            });
+    const socialIcons = document.querySelectorAll('.footer-social .icon');
+
+    socialIcons.forEach(icon => {
+        icon.addEventListener('click', () => {
+            const link = icon.getAttribute('data-link');
+            let url = '';
+
+            switch (link) {
+                case 'facebook':
+                    url = 'https://www.facebook.com/profile.php?id=61569216698408';
+                    break;
+                case 'twitter':
+                    url = 'https://x.com/Copatra60';
+                    break;
+                case 'instagram':
+                    url = 'https://www.instagram.com/copatra.60/?next=%2F';
+                    break;
+                default:
+                    url = '#';
+                    break;
+            }
+
+            window.open(url, '_blank'); // Abre el enlace en una nueva pestaña
         });
     });
     
